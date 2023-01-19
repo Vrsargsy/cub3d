@@ -29,5 +29,7 @@ clean :
 fclean : clean
 	$(MAKE) fclean -C ./libft
 	rm -rf $(NAME)
+norm:
+	norminette $(SRCS) $(wildcard *.h libft/*.h)
 
 re : fclean all

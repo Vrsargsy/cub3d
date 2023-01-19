@@ -14,8 +14,8 @@
 
 void	ft_get_data_addr(t_game *game)
 {
-	if (!(game->ea || game->so || game->we || game->no || \
-		game->key || game->door || game->key2))
+	if (!game->ea || !game->so || !game->we || !game->no || \
+		!game->key || !game->door || !game->key2)
 	{
 		write(2, "Error! Image file could not found!\n", 35);
 		free_list(game->map);
